@@ -1,6 +1,6 @@
 # 15112TermProject
 
-Project description:
+Initial project plan and description:
 
 Name: osu mini 
 
@@ -32,11 +32,17 @@ import music files and create maps from those. I will also need to figure out ho
 location, which I can likely do using a list or set of beatmaps.
 
 Timeline plan:
+
 By 11/23: make better UI
+
 By 11/24: Finish beatmap class
+
 By 11/28: finish beatmap editor class
+
 By 11/30: learn how to add cool effects
+
 By 12/6: make really good UI
+
 
 Version control plan:
 Just using google drive and regularly backing up versions of the project in different folders in the drive
