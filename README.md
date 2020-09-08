@@ -1,5 +1,7 @@
 # 15112TermProject
 
+Demonstration of the project: (please mute the audio and turn on captions, the audio quality is very poor) https://www.youtube.com/watch?v=KbCDIkDGkdQ
+
 Initial project plan and description:
 
 Name: osu mini 
