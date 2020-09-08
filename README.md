@@ -1,7 +1,7 @@
 # 15112TermProject
 
 Project description:
-Name: osu mini
+Name: osu mini \n
 Description: a rythmn game where you click circles to the beat of the song. you can also create your own beatmaps.
 add circles so that you have to place stuff on those
 add difficulty rating
