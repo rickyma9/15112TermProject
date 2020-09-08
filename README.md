@@ -1,10 +1,10 @@
 # 15112TermProject
 
 Project description:
-Name: osu mini \n
+
+Name: osu mini 
+
 Description: a rythmn game where you click circles to the beat of the song. you can also create your own beatmaps.
-add circles so that you have to place stuff on those
-add difficulty rating
 
 Competitive analysis: 
 My game is inspired by the online rythmn game OSU, which is a user-based game where you click circles to the beat of a song.
@@ -16,6 +16,7 @@ There will also be a small difference in that the user will be forced to place o
 Structural Plan:
 The project will be entirely based on OOP animation, where each object in the game is its own object (the circles and the sliders)
 Each state of the game will also have its own class, and will be called based on different actions the user takes. 
+
 (ex. welcome screen, game screen, pause screen, score screen)
 Beatmaps will likely be an object which can be edited using methods in an EditBeatmap class.
 
