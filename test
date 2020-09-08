@@ -1,0 +1,109 @@
+'''import pygame
+import pygamegame #the framework
+
+class myProject(pygamegame.PygameGame):
+    def init(self):
+        self.message = "World Helo"
+    def mousepressed(self, x, y):
+        print(self.message)
+
+#creating and running the game
+game = myProject()
+game.run()'''
+
+'''import sys
+
+program_name = sys.argv[0]
+arguments = sys.argv[1:]
+count = len(arguments)
+
+print(program_name, arguments, count)
+
+import sys
+print ("This is the name of the script: ", sys.argv[0])
+print ("Number of arguments: ", len(sys.argv))
+print ("The arguments are: " , str(sys.argv))'''
+
+'''import pygame
+
+pygame.init()
+
+screen = pygame.display.set_mode((640, 480))
+screen.fill(255, 0, 0)'''
+#pygame.draw.rect(Surface, (r,g,b), Rect, width=0)
+
+def roc2Helper(L,z):
+    if L == []:
+        z[0] += 1
+        return 0
+    elif isinstance(L[0], list):
+        return roc2Helper(L[0], z) + roc2Helper(L[1:], z)
+    elif isinstance(L[0], int):
+        z[1] += 1
+        return L[0] + roc2Helper(L[1:], z)
+
+def roc2(L):
+    z = [0,0]
+    n = roc2Helper(L, z)
+    return n == 12 and z[0] == 3 and z[1] == 6
+
+def countWord(s, target, num=0):
+    if s==target:
+        return num
+    else:
+        L = len(target)//2
+        return countWord(s[L:len(s)-L], target, num+1)
+
+def getTripleSum(L, k):
+    results = set()
+    efficiency = set(L)
+    for i in L:
+        check = i+k
+        for j in L:
+            if j != i:
+                if check+j-k in efficiency:
+                    results.add((i, j, k-i-j))
+    return results
+
+def farmStuff(states, d=None):
+    if d == None:
+        d = {}
+    if isValid(states, d):
+        return d
+    else:
+        for state in states:
+            for produce in ["potatoes", "broccoli", "twinkies"]:
+                d[state] = produce
+                solution = farmStuff(states,d)
+                if solution != None:
+                    return solution
+
+def isValid(states,d):
+    if len(d) < len(states):
+        return False
+    for state in d:
+        for neighbor in states[state]:
+            if neighbor not in d:
+                continue    
+            if d[neighbor] == d[state]:
+                return False
+    return True
+
+states = {
+    "california":["oregon", "nevada", "arizona"],
+    "oregon":["california", "nevada"],
+    "nevada":["oregon", "california", "arizona"],
+    "arizona":["california", "nevada"]
+}
+
+
+def permutations(a):
+    # returns a list of all permutations of the list a
+    if (len(a) == 0):
+        return [[]]
+    else:
+        allPerms = [ ]
+        for subPermutation in permutations(a[1:]):
+            for i in range(len(subPermutation)+1):
+                allPerms += [subPermutation[:i] + [a[0]] + subPermutation[i:]]
+        return allPerms
